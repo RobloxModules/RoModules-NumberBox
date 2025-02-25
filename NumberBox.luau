@@ -9,7 +9,7 @@ function mod.New(
 	maxInput: number?
 )
 	assert(typeof(frame) == "Instance" and frame:IsA("TextBox"), "Argument 1 must be a TextBox")
-	assert(typeof(valueObject) == "Instance", "You must provide an Instance that has a Value property.")
+	assert(typeof(valueObject) == "Instance" and valueObject:IsA("ValueBase"), "Argument 2 must be a Value object.")
 	
 	if typeof(inputMustBeInt) ~= "boolean" then inputMustBeInt = false end
 	if typeof(maxInput) ~= "number" then minInput = -math.huge end
