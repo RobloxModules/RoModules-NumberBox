@@ -13,7 +13,7 @@ function mod.New(
 	
 	if typeof(inputMustBeInt) ~= "boolean" then inputMustBeInt = false end
 	if typeof(maxInput) ~= "number" then minInput = -math.huge end
-	if typeof(maxInput) ~= "number" then maxInput = -math.huge end
+	if typeof(maxInput) ~= "number" then maxInput = math.huge end
 	
 	local self = {}
 	self.Update = mod.Update
