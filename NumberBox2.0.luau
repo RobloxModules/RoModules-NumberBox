@@ -54,6 +54,8 @@ function NumberBox:Bind(inputBox: TextBox)
 		elseif newValue > self.Max then
 			newValue = self.Max
 		end
+		
+		self._Changed:Fire(newValue)
 
 		self.Value = newValue
 		self._Textbox.Text = self.Value
